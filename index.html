@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel Academy | Classes 8-12</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Excel</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#exams">Exams</a></li>
+        <li><a href="#teachers">Teachers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <h1>Excel Academy</h1>
+        <p class="tagline">Your path to success in classes 8–12</p>
+        <a href="#classes" class="btn btn-primary">Explore Classes</a>
+      </div>
+    </section>
+
+    <!-- About (brief) -->
+    <section class="about section-padding">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p>We provide focused coaching for students of classes 8 to 12. Our experienced faculty and smart study material help you excel in board exams and competitive tests.</p>
+      </div>
+    </section>
+
+    <!-- Classes Section (8-12) -->
+    <section id="classes" class="classes section-padding bg-light">
+      <div class="container">
+        <h2 class="section-title">Classes 8 to 12</h2>
+        <div class="cards-grid">
+          <!-- Class 8 Card -->
+          <div class="card">
+            <h3>Class 8</h3>
+            <p>Foundation for higher classes</p>
+            <button class="btn btn-outline explore-btn" data-class="8">Explore</button>
+          </div>
+          <!-- Class 9 Card -->
+          <div class="card">
+            <h3>Class 9</h3>
+            <p>Build strong basics</p>
+            <button class="btn btn-outline explore-btn" data-class="9">Explore</button>
+          </div>
+          <!-- Class 10 Card -->
+          <div class="card">
+            <h3>Class 10</h3>
+            <p>Board exam preparation</p>
+            <button class="btn btn-outline explore-btn" data-class="10">Explore</button>
+          </div>
+          <!-- Class 11 Card -->
+          <div class="card">
+            <h3>Class 11</h3>
+            <p>Science & Commerce</p>
+            <button class="btn btn-outline explore-btn" data-class="11">Explore</button>
+          </div>
+          <!-- Class 12 Card -->
+          <div class="card">
+            <h3>Class 12</h3>
+            <p>Board + competitive</p>
+            <button class="btn btn-outline explore-btn" data-class="12">Explore</button>
+          </div>
+        </div>
+
+        <!-- Dynamic class details (hidden initially) -->
+        <div id="class-details-container" class="class-details" style="display: none;">
+          <h3 id="selected-class-title"></h3>
+          <div class="subjects-grid" id="subjects-list"></div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Exams Section (8-12) -->
+<section id="exams" class="exams section-padding">
+  <div class="container">
+    <h2 class="section-title">Exams</h2>
+
+    <div class="cards-grid">
+
+      <div class="card exam-card">
+        <h3>Class 8 Exam</h3>
+        <p>Mock test series</p>
+        <a href="https://examportal-1-o346.onrender.com" target="_blank">
+          <button class="btn btn-primary start-exam">Start Exam</button>
+        </a>
+      </div>
+
+      <div class="card exam-card">
+        <h3>Class 9 Exam</h3>
+        <p>Mock test series</p>
+        <a href="https://examportal-1-o346.onrender.com" target="_blank">
+          <button class="btn btn-primary start-exam">Start Exam</button>
+        </a>
+      </div>
+
+      <div class="card exam-card">
+        <h3>Class 10 Exam</h3>
+        <p>Mock test series</p>
+        <a href="https://examportal-1-o346.onrender.com" target="_blank">
+          <button class="btn btn-primary start-exam">Start Exam</button>
+        </a>
+      </div>
+
+      <div class="card exam-card">
+        <h3>Class 11 Exam</h3>
+        <p>Mock test series</p>
+        <a href="https://examportal-1-o346.onrender.com" target="_blank">
+          <button class="btn btn-primary start-exam">Start Exam</button>
+        </a>
+      </div>
+
+      <div class="card exam-card">
+        <h3>Class 12 Exam</h3>
+        <p>Mock test series</p>
+        <a href="https://examportal-1-o346.onrender.com" target="_blank">
+          <button class="btn btn-primary start-exam">Start Exam</button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Teachers / Faculty Section -->
+    <section id="teachers" class="teachers section-padding bg-light">
+      <div class="container">
+        <h2 class="section-title">Our Faculty</h2>
+        <div class="cards-grid">
+          <div class="card teacher-card">
+            <img src="https://via.placeholder.com/150" alt="teacher">
+            <h4>Dr. Anjali Sharma</h4>
+            <p>Mathematics (Ph.D)</p>
+          </div>
+          <div class="card teacher-card">
+            <img src="https://via.placeholder.com/150" alt="teacher">
+            <h4>Mr. Ravi Verma</h4>
+            <p>Science (M.Sc)</p>
+          </div>
+          <div class="card teacher-card">
+            <img src="https://via.placeholder.com/150" alt="teacher">
+            <h4>Ms. Priya Singh</h4>
+            <p>English (MA)</p>
+          </div>
+          <div class="card teacher-card">
+            <img src="https://via.placeholder.com/150" alt="teacher">
+            <h4>Mr. Amit Kumar</h4>
+            <p>Computer Science</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (brief) -->
+    <section class="testimonials section-padding">
+      <div class="container">
+        <h2 class="section-title">What Students Say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <p>Excel Academy helped me score 95% in class 10. The teachers are very supportive.</p>
+            <h5>— Rahul</h5>
+          </div>
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <p>Excellent study materials and regular tests. I cleared JEE with good rank.</p>
+            <h5>— Sneha</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (UI only) -->
+    <section id="contact" class="contact section-padding">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <textarea rows="4" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#exams">Exams</a>
+        <a href="#teachers">Teachers</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p>&copy; 2025 Excel Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
