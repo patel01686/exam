@@ -1,4 +1,4 @@
-/* style.css (full file, only footer section updated) */
+/* style.css (full file with updated logo) */
 * {
   margin: 0;
   padding: 0;
@@ -91,11 +91,51 @@ body {
   align-items: center;
   height: 70px;
 }
+
+/* ===== UPDATED LOGO STYLES ===== */
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #2563eb;
+  letter-spacing: -0.5px;
 }
+.logo i {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+.logo-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  white-space: nowrap;
+}
+.logo-highlight {
+  font-weight: 300;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-left: 4px;
+}
+
+/* Mobile adjustment for logo */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+  .logo i {
+    font-size: 1.8rem;
+  }
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -357,7 +397,7 @@ body {
   color: #2563eb;
 }
 
-/* ===== UPDATED FOOTER ===== (clean, modern, no page links) */
+/* Footer (unchanged) */
 .footer {
   background: #0f172a;
   color: #cbd5e1;
