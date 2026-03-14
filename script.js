@@ -1,21 +1,34 @@
-// script.js
+// script.js (unchanged, included for completeness)
 document.addEventListener('DOMContentLoaded', function() {
-  // ----- Mobile hamburger menu -----
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  if (hamburger) {
+  // Mobile hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (hamburger && navLinks) {
     hamburger.addEventListener('click', function() {
-      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+      if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+      } else {
+        navLinks.style.display = 'flex';
+      }
+    });
+
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navLinks.style.display = 'none';
+        }
+      });
     });
   }
 
-  // ----- Explore buttons: show class details with video links -----
+  // Explore buttons
   const exploreBtns = document.querySelectorAll('.explore-btn');
   const detailsContainer = document.getElementById('class-details-container');
   const selectedClassTitle = document.getElementById('selected-class-title');
   const subjectsList = document.getElementById('subjects-list');
 
-  // Data for subjects (video links open YouTube)
   const classData = {
     8: {
       subjects: [
@@ -65,37 +78,30 @@ document.addEventListener('DOMContentLoaded', function() {
       const data = classData[classNum];
       if (!data) return;
 
-      // Set title
       selectedClassTitle.textContent = `Class ${classNum} - Subject Videos`;
 
-      // Build subjects HTML
       let htmlStr = '';
       data.subjects.forEach(subj => {
         htmlStr += `<div class="subject-card">
           <h4>${subj.name}</h4>
           <ul>`;
         subj.videos.forEach(video => {
-          // Direct YouTube link (placeholder)
           htmlStr += `<li><a href="https://www.youtube.com/results?search_query=${encodeURIComponent(video + ' class ' + classNum)}" target="_blank"><i class="fab fa-youtube" style="color:#ff0000;"></i> ${video}</a></li>`;
         });
         htmlStr += `</ul></div>`;
       });
       subjectsList.innerHTML = htmlStr;
 
-      // Show container
       detailsContainer.style.display = 'block';
-      // Scroll to it smoothly
       detailsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
-  // ----- Start Exam buttons: redirect to example.com -----
+  // Start Exam buttons
   const examBtns = document.querySelectorAll('.start-exam');
   examBtns.forEach(btn => {
     btn.addEventListener('click', function() {
       window.location.href = 'https://examportal-1-o346.onrender.com';
     });
   });
-
-  // ----- Simple FAQ accordion (if any, but not present) ----
 });

@@ -7,7 +7,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,15 +15,15 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container nav-container">
-      <div class="logo">Excel</div>
-      <ul class="nav-links">
+      <div class="logo">SkillEdge</div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#classes">Classes</a></li>
         <li><a href="#exams">Exams</a></li>
-        <li><a href="#teachers">Teachers</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="hamburger"><i class="fas fa-bars"></i></div>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
   </nav>
 
@@ -31,13 +31,20 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="container hero-content">
-        <h1>Excel Academy</h1>
-        <p class="tagline">Your path to success in classes 8–12</p>
+        <h1 class="premium-heading">
+          <span class="gradient-text">Excel Academy</span>
+        </h1>
+        <p class="tagline">
+          <span class="colored-word">your</span> 
+          <span class="colored-word">path</span> 
+          <span class="colored-word">to</span> 
+          <span class="colored-word highlight">success</span>
+        </p>
         <a href="#classes" class="btn btn-primary">Explore Classes</a>
       </div>
     </section>
 
-    <!-- About (brief) -->
+    <!-- About -->
     <section class="about section-padding">
       <div class="container">
         <h2 class="section-title">About Us</h2>
@@ -94,83 +101,37 @@
 <section id="exams" class="exams section-padding">
   <div class="container">
     <h2 class="section-title">Exams</h2>
-
     <div class="cards-grid">
-
       <div class="card exam-card">
         <h3>Class 8 Exam</h3>
         <p>Mock test series</p>
-        <a href="https://examportal-1-o346.onrender.com" target="_blank">
-          <button class="btn btn-primary start-exam">Start Exam</button>
-        </a>
+        <button class="btn btn-primary start-exam">Start Exam</button>
       </div>
-
       <div class="card exam-card">
         <h3>Class 9 Exam</h3>
         <p>Mock test series</p>
-        <a href="https://examportal-1-o346.onrender.com" target="_blank">
-          <button class="btn btn-primary start-exam">Start Exam</button>
-        </a>
+        <button class="btn btn-primary start-exam">Start Exam</button>
       </div>
-
       <div class="card exam-card">
         <h3>Class 10 Exam</h3>
         <p>Mock test series</p>
-        <a href="https://examportal-1-o346.onrender.com" target="_blank">
-          <button class="btn btn-primary start-exam">Start Exam</button>
-        </a>
+        <button class="btn btn-primary start-exam">Start Exam</button>
       </div>
-
       <div class="card exam-card">
         <h3>Class 11 Exam</h3>
         <p>Mock test series</p>
-        <a href="https://examportal-1-o346.onrender.com" target="_blank">
-          <button class="btn btn-primary start-exam">Start Exam</button>
-        </a>
+        <button class="btn btn-primary start-exam">Start Exam</button>
       </div>
-
       <div class="card exam-card">
         <h3>Class 12 Exam</h3>
         <p>Mock test series</p>
-        <a href="https://examportal-1-o346.onrender.com" target="_blank">
-          <button class="btn btn-primary start-exam">Start Exam</button>
-        </a>
+        <button class="btn btn-primary start-exam">Start Exam</button>
       </div>
-
     </div>
   </div>
 </section>
 
-    <!-- Teachers / Faculty Section -->
-    <section id="teachers" class="teachers section-padding bg-light">
-      <div class="container">
-        <h2 class="section-title">Our Faculty</h2>
-        <div class="cards-grid">
-          <div class="card teacher-card">
-            <img src="https://via.placeholder.com/150" alt="teacher">
-            <h4>Dr. Anjali Sharma</h4>
-            <p>Mathematics (Ph.D)</p>
-          </div>
-          <div class="card teacher-card">
-            <img src="https://via.placeholder.com/150" alt="teacher">
-            <h4>Mr. Ravi Verma</h4>
-            <p>Science (M.Sc)</p>
-          </div>
-          <div class="card teacher-card">
-            <img src="https://via.placeholder.com/150" alt="teacher">
-            <h4>Ms. Priya Singh</h4>
-            <p>English (MA)</p>
-          </div>
-          <div class="card teacher-card">
-            <img src="https://via.placeholder.com/150" alt="teacher">
-            <h4>Mr. Amit Kumar</h4>
-            <p>Computer Science</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials (brief) -->
+    <!-- Testimonials -->
     <section class="testimonials section-padding">
       <div class="container">
         <h2 class="section-title">What Students Say</h2>
@@ -189,35 +150,44 @@
       </div>
     </section>
 
-    <!-- Contact Section (UI only) -->
-    <section id="contact" class="contact section-padding">
+    <!-- Founder Profile Section -->
+    <section class="founder section-padding bg-light">
       <div class="container">
-        <h2 class="section-title">Contact Us</h2>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Email Address" required>
-          <textarea rows="4" placeholder="Your Message"></textarea>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+        <h2 class="section-title">Our Founder</h2>
+        <div class="founder-card">
+          <img src="https://via.placeholder.com/200" alt="founder">
+          <h3>Dr. Anil Kapoor</h3>
+          <p class="designation">Founder & Director</p>
+          <p class="bio">20+ years of experience in mentoring students for IIT-JEE & Board exams.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== UPDATED FOOTER ===== (clean, no page links, with contact info) -->
   <footer class="footer">
     <div class="container footer-content">
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#classes">Classes</a>
-        <a href="#exams">Exams</a>
-        <a href="#teachers">Teachers</a>
-        <a href="#contact">Contact</a>
+      <!-- Brand & Tagline -->
+      <div class="footer-brand">
+        <h3>Excel Academy</h3>
+        <p>Empowering students since 2010</p>
       </div>
-      <p>&copy; 2025 Excel Academy. All rights reserved.</p>
+
+     
+
+      <!-- Social Links (larger, with hover) -->
+      <div class="social-links">
+        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="copyright">&copy; 2025 Excel Academy. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- External JavaScript -->
+  <!-- External JavaScript (unchanged) -->
   <script src="script.js"></script>
 </body>
 </html>
